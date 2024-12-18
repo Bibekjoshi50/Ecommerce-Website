@@ -77,7 +77,7 @@ margin-top: 12px;
     color: rgb(4, 112, 112);
 
 }
-.trend .head{
+ .head h1{
     text-align: center;
     padding: 33px;
     margin-top: 32px;
@@ -102,5 +102,95 @@ margin-top: 12px;
     border-radius: 31px;
 }
 .crdText{
-    margin-left: 11px;
+    margin-left: 21px;
+    padding: 8px;
+}
+.crdText button{
+    width: 110px;
+    height: 33px;
+    border: 33px;
+    background-color: rgb(5, 130, 130);
+    color: white;
+    font-size: 18px;
+    margin-top: 11px;
+}
+.crdText i{
+    color:rgb(220, 146, 10) ;
+}
+.blog{
+    display: flex;
+    justify-content: center;
+    width: 500px;
+    height: 300px;
+    background-color: #fff;
+    margin-inline: 22px;
+    border-radius: 11px;
+   
+
+}
+.blog:hover{
+    transition: 0.6s ease;
+    width: 520px;
+    height: 320px;
+
+}
+
+.blog img{
+    padding: 22px;
+    width: 85%;
+}
+
+.blogText{
+    padding: 12px;
+    margin-top: 32px;
+}
+.blogText a{
+    width: 130px;
+    padding:4px ;
+    height: 18px;
+    background-color: rgb(8, 152, 152);
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+   position: relative;
+   top: 33px;
+}
+.letter{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    background-color:rgb(4, 4, 91) ;
+    padding: 43px;
+}
+.inp{
+    display: flex;
+}
+.inp input{
+    width: 330px;
+    height: 33px;
+    outline: none;
+    font-size: 18px;
+    border: none;
+}
+.inp button{
+    width: 100px;
+    height: 33px;
+    background-color: rgb(8, 119, 119);
+    color: white;
+    border: none;
+}
+.inp button:hover{
+    background-color: green;
+}
+.footer{
+    display: flex;
+    justify-content: center;
+    padding: 53px;
+}
+.footer .footerText{
+    margin-inline: 85px;
+
+}
+.footerText {
+    margin-top: 11px;
 }
