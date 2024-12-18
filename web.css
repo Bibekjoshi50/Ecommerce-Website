@@ -39,7 +39,68 @@ ul li a:hover{
     cursor: pointer;
 }
 ul li i :hover{
-    border-bottom: 2px solid black;
+  color: grey;
     cursor: pointer;
     
+}
+.main{
+    display: flex;
+    justify-content: space-around;
+}
+.main .mainText{
+    margin-top: 144px;
+    font-size: 24px;
+}
+.mainText h1{
+    font-size: 64px;
+    color: rgb(4, 138, 138);
+}
+.mainText.top{
+    color: rgb(4, 138, 138);
+}
+.mainText button{
+    width: 145px;
+    height: 40px;
+    background-color: rgb(4, 126, 126);
+    border: none;
+    font-size: 22px;
+    color: white;
+    margin-top: 24px;
+
+}
+.mainText p{
+margin-top: 12px;
+}
+.mainText button:hover{
+    border: 3px solid rgb(5, 121, 121);
+    background: transparent;
+    color: rgb(4, 112, 112);
+
+}
+.trend .head{
+    text-align: center;
+    padding: 33px;
+    margin-top: 32px;
+}
+.head span{
+    color: rgb(5, 140, 140);
+}
+.card{
+    display: flex;
+    justify-content: center;
+
+}
+.card .crd{
+    width: 300px;
+    height: 500px;
+    background-color: #fff;
+    margin-inline: 11px;
+}
+.crd img{
+    width: 85%;
+    padding: 22px;
+    border-radius: 31px;
+}
+.crdText{
+    margin-left: 11px;
 }
