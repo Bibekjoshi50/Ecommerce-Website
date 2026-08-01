@@ -499,9 +499,11 @@ section {
    FOOTER
    ========================================================= */
 .footer {
+    position: relative;
     background-color: var(--color-ink);
     color: #D8DADB;
     padding: 72px clamp(20px, 5vw, 64px) 28px;
+    border-top: 3px solid var(--color-teal);
 }
 .footer-grid {
     display: grid;
@@ -512,41 +514,78 @@ section {
 }
 .footer-col h3 {
     color: #fff;
-    font-size: 16px;
-    font-weight: 500;
-    margin-bottom: 16px;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-bottom: 18px;
 }
 .footer-col a,
 .footer-col p {
     display: block;
     font-size: 14px;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     color: #B8BABB;
+    line-height: 1.6;
 }
-.footer-col a:hover { color: var(--color-teal); }
-.footer-brand p { max-width: 240px; }
-.footer-brand .logo { color: #fff; margin-bottom: 14px; display: inline-block; }
+.footer-col a {
+    width: fit-content;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+.footer-col a:hover {
+    color: var(--color-teal);
+    transform: translateX(3px);
+}
+.footer-col a i,
+.footer-address i,
+.footer-note i {
+    color: var(--color-teal);
+    width: 16px;
+    margin-right: 8px;
+}
+.footer-address,
+.footer-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 2px;
+}
+.footer-note {
+    color: #8B8E8F;
+    font-size: 13px;
+    font-style: italic;
+}
+.footer-brand p { max-width: 260px; color: #9A9C9D; }
+.footer-brand .logo { color: #fff; margin-bottom: 16px; display: inline-block; }
 .social-links {
     display: flex;
-    gap: 14px;
-    margin-top: 8px;
+    gap: 12px;
+    margin-top: 12px;
 }
 .social-links a {
-    width: 34px; height: 34px;
+    width: 36px; height: 36px;
     border-radius: 50%;
     border: 1px solid #3A3D3E;
     display: flex; align-items: center; justify-content: center;
+    color: #D8DADB;
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
 .social-links a:hover {
+    background-color: var(--color-teal);
     border-color: var(--color-teal);
-    color: var(--color-teal);
+    color: #fff;
+    transform: translateY(-3px);
 }
+
 .footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
     max-width: var(--container);
     margin: 48px auto 0;
     padding-top: 24px;
     border-top: 1px solid #2B2E2F;
-    text-align: center;
     font-size: 13px;
     color: #8B8E8F;
 }
@@ -554,13 +593,36 @@ section {
     color: var(--color-teal);
     font-weight: 600;
 }
+.footer-legal {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+.footer-legal a {
+    color: #8B8E8F;
+    font-weight: 400;
+}
+.footer-legal a:hover { color: var(--color-teal); }
+.back-to-top {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--color-teal) !important;
+    font-weight: 600 !important;
+}
+.back-to-top i {
+    transition: transform 0.2s ease;
+}
+.back-to-top:hover i {
+    transform: translateY(-3px);
+}
 
 /* =========================================================
    RESPONSIVE
    ========================================================= */
 @media (max-width: 1024px) {
     .card-grid { grid-template-columns: repeat(2, 1fr); }
-    .footer-grid { grid-template-columns: 1fr 1fr; }
+    .footer-grid { grid-template-columns: 1fr 1fr; row-gap: 40px; }
 }
 
 @media (max-width: 900px) {
@@ -605,6 +667,14 @@ section {
     section { padding: 64px 20px; }
     .card-grid { grid-template-columns: 1fr; max-width: 360px; margin-inline: auto; }
     .journal-grid { grid-template-columns: 1fr; }
-    .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+    .footer-grid { grid-template-columns: 1fr; gap: 0; }
+    .footer-col {
+        padding: 24px 0;
+        border-bottom: 1px solid #2B2E2F;
+    }
+    .footer-col:first-child { padding-top: 0; }
+    .footer-col:last-child { border-bottom: none; }
+    .footer-bottom { flex-direction: column; text-align: center; }
+    .footer-legal { justify-content: center; flex-wrap: wrap; }
     .hero-actions { flex-direction: column; align-items: stretch; }
 }
