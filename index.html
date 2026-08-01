@@ -3,216 +3,301 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ecommerse Website</title>
+    <title>Trends — Trending Fashion, Made Simple</title>
     <link rel="stylesheet" href="web.css">
     <script src="https://kit.fontawesome.com/f30fac2c61.js" crossorigin="anonymous"></script>
-    <link
-    href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Catamaran:wght@200&family=Courgette&family=Edu+TAS+Beginner:wght@700&family=Lato:wght@300;900&family=Mukta:wght@700&family=Mulish:wght@300&family=Open+Sans&family=PT+Sans:ital,wght@1,700&family=Poppins:wght@300&family=Raleway:wght@100&family=Roboto&family=Roboto+Condensed:wght@700&family=Roboto+Slab&display=swap"
-    rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="icon" type="image/png" href="bj1.png">
-
 </head>
 <body>
-   <div class="container">
-    <nav>
-        <div class="logo ">
-            <h1>Trends link </h1>
-        </div>
-        <i class="fa-solid fa-bars hamburger"></i>
-       <ul>
-        <li>
-            <a id="home">Home </a>
-            <a onclick="Shops()">Shops</a>
-            <a onclick="Blogs()">Blogs </a>
-            <a onclick="About()">About </a>
-            <a onclick="Contact()">Contact </a>
-            <i class="fa-solid fa-cart-shopping"></i>
 
-        </li>
-       </ul>
-    </nav>
-    <div class="main">
-        <div class="mainText">
-            <h2>Trends</h2>
-            <h1>Super Value Deals</h1>
-            <h1>ON All Products</h1>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-            <button>Explore</button>
-        </div>  
-        <img src="bj1.png" alt="">
-    </div>
-    <div class="trend">
-        <div class="head">
-            <h1>Trends <span>Men's Wear</span></h1>
+    <!-- ============ NAV ============ -->
+    <header class="nav" id="top">
+        <a class="logo" href="#top">Trends<span>.</span></a>
 
+        <nav class="nav-links" id="navLinks">
+            <a href="#top" id="home">Home</a>
+            <a href="#shop">Shop</a>
+            <a href="#blog">Journal</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+            <button class="icon-btn" aria-label="View cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="cart-count">0</span>
+            </button>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
         </div>
-        <div class="card">
-            <div class="crd">
-                <img src="srt1.webp" alt="">
-                <div class="crdText">
-                    <h2>Cotton Trending Shirt's</h2>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-regular fa-star-half-stroke"></i><br>
-                    <button>Add to Cart</button>
+    </header>
+
+    <main>
+        <!-- ============ HERO ============ -->
+        <section class="hero">
+            <div class="hero-text">
+                <p class="eyebrow">New season, new favorites</p>
+                <h1>Super value deals<br>on everything you wear</h1>
+                <p class="hero-copy">Hand-picked pieces for him and her, refreshed weekly. Quality fabrics, honest prices, no filler.</p>
+                <div class="hero-actions">
+                    <a href="#shop" class="btn btn-primary">Explore the shop</a>
+                    <a href="#blog" class="btn btn-ghost">Read the journal</a>
                 </div>
             </div>
-            <!-- <div class="card"> -->
-                <div class="crd">
-                    <img src="srt2.webp" alt="">
-                    <div class="crdText">
-                        <h2>Cotton Trending Shirt's</h2>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-regular fa-star-half-stroke"></i><br>
-                        <button>Add to Cart</button>
+            <div class="hero-media">
+                <img src="bj1.png" alt="Featured Trends look">
+                <span class="hero-badge">Up to 50% off</span>
+            </div>
+        </section>
+
+        <!-- ============ MARQUEE ============ -->
+        <div class="marquee" aria-hidden="true">
+            <div class="marquee-track">
+                <span>New drop this week</span>
+                <span>&#10022;</span>
+                <span>Free shipping over Rs. 2000</span>
+                <span>&#10022;</span>
+                <span>Easy 7-day returns</span>
+                <span>&#10022;</span>
+                <span>New drop this week</span>
+                <span>&#10022;</span>
+                <span>Free shipping over Rs. 2000</span>
+                <span>&#10022;</span>
+                <span>Easy 7-day returns</span>
+                <span>&#10022;</span>
+            </div>
+        </div>
+
+        <!-- ============ MEN'S WEAR ============ -->
+        <section class="collection" id="shop">
+            <div class="section-head reveal">
+                <p class="eyebrow">Curated for him</p>
+                <h2>Trending <span>Men's Wear</span></h2>
+            </div>
+
+            <div class="card-grid reveal">
+                <article class="product-card">
+                    <div class="product-media">
+                        <img src="srt1.webp" alt="Cotton trending shirt, style one">
+                        <span class="ribbon">Bestseller</span>
                     </div>
-                </div>
-                <!-- <div class="card"> -->
-                    <div class="crd">
-                        <img src="srt6.webp" alt="">
-                        <div class="crdText">
-                            <h2>Cotton Trending Shirt's</h2>
+                    <div class="product-body">
+                        <h3>Cotton Trending Shirt</h3>
+                        <div class="rating" aria-label="4.5 out of 5 stars">
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
-                            <i class="fa-regular fa-star-half-stroke"></i><br>
-                            <button>Add to Cart</button>
+                            <i class="fa-regular fa-star-half-stroke"></i>
+                        </div>
+                        <div class="product-footer">
+                            <span class="price">Rs. 1,450</span>
+                            <button class="btn btn-small add-to-cart">Add to cart</button>
                         </div>
                     </div>
-        </div>
-    </div>
-     <!-- womean card -->
+                </article>
 
-     <div class="trends">
-        <div class="head">
-            <h1>Trends <span>Girl's Wear</span></h1>
-
-        </div>
-        <div class="card">
-            <div class="crd">
-                <img src="wn4.webp" alt="">
-                <div class="crdText">
-                    <h2>Trending Girl Top's</h2>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-regular fa-star-half-stroke"></i><br>
-                <button>Add to Cart</button>
-                </div>
-            </div>
-            <!-- <div class="card"> -->
-                <div class="crd">
-                    <img src="wn5.webp" alt="">
-                   
-                    <div class="crdText">
-                        <h2>Trending Girl Top's</h2>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-regular fa-star-half-stroke"></i><br>
-                        <button>Add to Cart</button>
+                <article class="product-card">
+                    <div class="product-media">
+                        <img src="srt2.webp" alt="Cotton trending shirt, style two">
                     </div>
-                </div>
-                <!-- <div class="card"> -->
-                    <div class="crd">
-                        <img src="wn6.webp" alt="">
-                        <div class="crdText">
-                            <h2> Trending Girl Top's</h2>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-regular fa-star-half-stroke"></i><br>
-                        <button>Add to Cart</button>
+                    <div class="product-body">
+                        <h3>Cotton Trending Shirt</h3>
+                        <div class="rating" aria-label="4.5 out of 5 stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star-half-stroke"></i>
+                        </div>
+                        <div class="product-footer">
+                            <span class="price">Rs. 1,600</span>
+                            <button class="btn btn-small add-to-cart">Add to cart</button>
                         </div>
                     </div>
-        </div>
-    </div>
-    <!-- blogs -->
-    <div class="trend">
-        <div class="head">
-            <h1>Trending  <span>men's and Girl'sWear</span></h1>
+                </article>
 
-        </div>
-        <div class="card">
-            <div class="blog">
-                <img src="tr1.webp" alt="">
-                <div class="blogText">
-                    <h2>Trending Girl Cloths</h2>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque at ex accusamus.</p>
-                    <a href="https://www.myntra.com/">Read More</a>
+                <article class="product-card">
+                    <div class="product-media">
+                        <img src="srt6.webp" alt="Cotton trending shirt, style three">
+                        <span class="ribbon">New</span>
+                    </div>
+                    <div class="product-body">
+                        <h3>Cotton Trending Shirt</h3>
+                        <div class="rating" aria-label="4.5 out of 5 stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star-half-stroke"></i>
+                        </div>
+                        <div class="product-footer">
+                            <span class="price">Rs. 1,550</span>
+                            <button class="btn btn-small add-to-cart">Add to cart</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ============ GIRL'S WEAR ============ -->
+        <section class="collection alt">
+            <div class="section-head reveal">
+                <p class="eyebrow">Curated for her</p>
+                <h2>Trending <span>Girl's Wear</span></h2>
+            </div>
+
+            <div class="card-grid reveal">
+                <article class="product-card">
+                    <div class="product-media">
+                        <img src="wn4.webp" alt="Trending girl's top, style one">
+                        <span class="ribbon">Bestseller</span>
+                    </div>
+                    <div class="product-body">
+                        <h3>Trending Girl's Top</h3>
+                        <div class="rating" aria-label="4.5 out of 5 stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star-half-stroke"></i>
+                        </div>
+                        <div class="product-footer">
+                            <span class="price">Rs. 1,250</span>
+                            <button class="btn btn-small add-to-cart">Add to cart</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-media">
+                        <img src="wn5.webp" alt="Trending girl's top, style two">
+                    </div>
+                    <div class="product-body">
+                        <h3>Trending Girl's Top</h3>
+                        <div class="rating" aria-label="4.5 out of 5 stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star-half-stroke"></i>
+                        </div>
+                        <div class="product-footer">
+                            <span class="price">Rs. 1,300</span>
+                            <button class="btn btn-small add-to-cart">Add to cart</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-media">
+                        <img src="wn6.webp" alt="Trending girl's top, style three">
+                        <span class="ribbon">New</span>
+                    </div>
+                    <div class="product-body">
+                        <h3>Trending Girl's Top</h3>
+                        <div class="rating" aria-label="4.5 out of 5 stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star-half-stroke"></i>
+                        </div>
+                        <div class="product-footer">
+                            <span class="price">Rs. 1,300</span>
+                            <button class="btn btn-small add-to-cart">Add to cart</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ============ JOURNAL / BLOG ============ -->
+        <section class="journal" id="blog">
+            <div class="section-head reveal">
+                <p class="eyebrow">From the journal</p>
+                <h2>Trending <span>styles this month</span></h2>
+            </div>
+
+            <div class="journal-grid reveal">
+                <article class="journal-card">
+                    <img src="tr1.webp" alt="Trending girls' clothing feature">
+                    <div class="journal-body">
+                        <h3>5 girls' outfits everyone's wearing right now</h3>
+                        <p>From oversized layers to pastel knits — the pieces our stylists keep reaching for this season.</p>
+                        <a href="https://www.myntra.com/" target="_blank" rel="noopener">Read more <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="journal-card">
+                    <img src="tr3.webp" alt="Trending men's clothing feature">
+                    <div class="journal-body">
+                        <h3>The boy's edit: staple pieces for every wardrobe</h3>
+                        <p>Simple, versatile clothing that mixes and matches — built to outlast the trend cycle.</p>
+                        <a href="https://evanmens.com/" target="_blank" rel="noopener">Read more <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ============ NEWSLETTER ============ -->
+        <section class="newsletter reveal">
+            <div class="newsletter-text">
+                <h2>Get first access to new drops</h2>
+                <p>One email a week. New arrivals, restocks, and the occasional discount code.</p>
+            </div>
+            <form class="newsletter-form" onsubmit="return false;">
+                <label class="sr-only" for="newsletterEmail">Email address</label>
+                <input type="email" id="newsletterEmail" placeholder="Enter your email" required>
+                <button type="submit" class="btn btn-primary">Sign up</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-col footer-brand">
+                <a class="logo" href="#top">Trends<span>.</span></a>
+                <p>Trending fashion for him and her, at prices that make sense.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
                 </div>
             </div>
 
-            <div class="blog">
-                <img src="tr3.webp" alt="">
-                <div class="blogText">
-                    <h2>Trending Boy's Cloths</h2>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque at ex accusamus.</p>
-                    <a href="https://evanmens.com/">Read More</a>
-                </div>
+            <div class="footer-col" id="about">
+                <h3>About Us</h3>
+                <p>Bheem Datt&nbsp;18, Mahendranagar,<br>Kanchanpur, Sudurpashchim, Nepal</p>
+                <a href="#shop">Shop</a>
+                <a href="#blog">Journal</a>
+            </div>
+
+            <div class="footer-col" id="contact">
+                <h3>Contact</h3>
+                <a href="tel:9868736074"><i class="fa-solid fa-phone"></i> 9868736074</a>
+                <a href="mailto:hello@trends.com"><i class="fa-solid fa-envelope"></i> hello@trends.com</a>
+                <p>New arrivals every Friday.</p>
+            </div>
+
+            <div class="footer-col">
+                <h3>Trending</h3>
+                <a href="#shop">Men's Wear</a>
+                <a href="#shop">Girl's Wear</a>
+                <a href="#blog">Style Journal</a>
             </div>
         </div>
-    </div>
 
-    <!-- letter -->
-     <div class="letter">
-        <div class="letterText">
-            <h1>Sign Up for NewsLetter</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <div class="footer-bottom">
+            <p>&copy; 2081 Bibek Joshi. Developed by <a href="https://www.linkedin.com/in/bibekjoshi50/" target="_blank" rel="noopener">Bibek Joshi</a></p>
         </div>
-        <div class="inp">
-           <input type="text" placeholder="Enter Email"> 
-           <button>Sign up </button>
-        </div>
-     </div>
-     <!-- footer -->
-      <div class="footer">
-        <div class="footerText">
-            <h2>Trends </h2>
-            <p>Service</p>
-            <p>Satisfaction</p>
-            <p></p>
-            <p></p>
-        </div>
-        <div class="footerText">
-            <h2>About Us</h2>
-            <p>Address :Bheem datt 18 <br> mahendranagar kanchanpur ,<br>
-                sudurpashim Nepal
-            </p>
-            <p>Service</p>
-            <p>Customer</p>
-            <p>Satisfaction</p>
-        </div>
-        <div class="footerText">
-            <h2>Content</h2>
-            <p>9868736074</p>
-            <p>Customer</p>
-            <p>Comming up..</p>
-            <p>New Arrival</p>
-        </div>
-        <div class="footerText">
-            <h2>Trending</h2>
-            <p>Service</p>
-            <p>Customer</p>
-            <p>Shops</p>
-            <p></p>
-        </div>
-      </div>
-   </div> 
-   <script src="web.js"></script>
-   <footer style="text-align: center; padding: 10px; background-color: #f8f8f8;">
-    <p>Copyright @  2081 bibek Joshi  | Developed by <a href="https://www.linkedin.com/in/bibekjoshi50/">Bibek Joshi </a></p>
+    </footer>
 
-  </footer>
+    <script src="web.js"></script>
 </body>
 </html>
